@@ -58,7 +58,7 @@
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/"
         }, "files": [
-            "./ramdan/helper.php"
+            "./ramdan/helper.php",
         ]
     },
     "autoload-dev": {
