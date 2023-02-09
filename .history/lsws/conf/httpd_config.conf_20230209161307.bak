@@ -255,6 +255,18 @@ vhTemplate docker {
   listeners               HTTP, HTTPS
   note                    docker
 
+  member persediaan-sj.api-admin-archillery-revi.com {
+    vhDomain              persediaan-sj.api-admin-archillery-revi.com,www.persediaan-sj.api-admin-archillery-revi.com
+  }
+
+  member perpustakaan-febriadi.api-admin-archillery-revi.com {
+    vhDomain              perpustakaan-febriadi.api-admin-archillery-revi.com,www.perpustakaan-febriadi.api-admin-archillery-revi.com
+  }
+
+  member perpustakaan-andri.api-admin-archillery-revi.com {
+    vhDomain              perpustakaan-andri.api-admin-archillery-revi.com,www.perpustakaan-andri.api-admin-archillery-revi.com
+  }
+
   member localhost {
     vhDomain              localhost, *
   }
