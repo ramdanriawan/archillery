@@ -14,7 +14,7 @@ Route::get(
         return view('privacy-policy');
     }
 );
-
+/////////////////////////////
 Route::get(
     'terms-conditions',
     function () {
