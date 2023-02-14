@@ -7,6 +7,21 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LoginController;
 
+
+Route::get(
+    'privacy-policy',
+    function () {
+        return view('privacy-policy');
+    }
+);
+
+Route::get(
+    'terms-conditions',
+    function () {
+        return view('terms-conditions');
+    }
+);
+
 Route::get('/', function () {
 
     return redirect('login');
@@ -21,15 +36,8 @@ Route::group(['middleware' => ['auth:sanctum', 'verified']], function () {
         $data['users'] = User::all();
 
         return view('dashboard', $data);
+        
     })->name('dashboard');
-
-    Route::get('privacy-policy', function () {
-        die(file_get_contents('https://www.privacypolicyonline.com/live.php?token=BpEr6sqsSGtuKdKShZtS3BGDiPtesOI9'));
-    });
-
-    Route::get('term-condition', function () {
-        die(file_get_contents('https://www.privacypolicyonline.com/live.php?token=niXc0dDHSKtvUmkij6qJPig1JiHIEqy0'));
-    });
 
     Route::get('user/profile', [UserController::class, 'profile'])->name('user.profile');
     Route::get('user/set-pemilik-gerejaku/{user}', [UserController::class, 'setPemilikRumah'])->name('user.set-pemilik-gerejaku');
